@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ARGUX — Descargar · Inteligencia de Rutas</title>
+<style>
+  :root{
+    --bg:#0b0d12; --surface:#12151c; --line:#222734;
+    --text:#e8ecf3; --muted:#94a0b4; --accent:#0bbbd6; --accent-2:#10b981;
+    --warn:#f59e0b; --r:14px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:
+      radial-gradient(900px 500px at 80% -10%, rgba(11,187,214,.10), transparent 60%),
+      radial-gradient(700px 400px at 10% 110%, rgba(16,185,129,.08), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans",-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; line-height:1.55;
+  }
+  .wrap{max-width:880px; margin:0 auto; padding:64px 24px 80px}
+  .brand{display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.5px}
+  .brand .logo{
+    font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+    font-size:13px; color:var(--accent); border:1px solid var(--line);
+    padding:6px 10px; border-radius:8px; background:var(--surface);
+  }
+  h1{font-size:clamp(34px,6vw,56px); line-height:1.05; margin:38px 0 14px; letter-spacing:-.5px}
+  h1 .accent{color:var(--accent)}
+  .lede{font-size:clamp(16px,2.4vw,20px); color:var(--muted); max-width:620px; margin:0 0 36px}
+  .cta{display:flex; flex-wrap:wrap; gap:14px; align-items:center}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px; text-decoration:none;
+    font-weight:600; font-size:16px; padding:15px 26px; border-radius:12px;
+    background:linear-gradient(180deg,var(--accent),#0a9fb8); color:#04121a;
+    box-shadow:0 8px 24px rgba(11,187,214,.28); transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .btn:hover{transform:translateY(-2px); box-shadow:0 12px 30px rgba(11,187,214,.36)}
+  .btn.secondary{background:transparent; color:var(--text); border:1px solid var(--line); box-shadow:none}
+  .req{color:var(--muted); font-size:13px; margin-top:14px}
+  .note{
+    margin-top:22px; padding:14px 16px; border-radius:12px;
+    background:rgba(245,158,11,.08); border:1px solid rgba(245,158,11,.32);
+    color:#f3d8a6; font-size:14px;
+  }
+  .note b{color:var(--warn)}
+  h2{font-size:24px; margin:64px 0 8px; letter-spacing:-.3px}
+  .sub{color:var(--muted); margin:0 0 20px}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:20px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:var(--r); padding:22px}
+  .card .n{font-family:"IBM Plex Mono",monospace; color:var(--accent); font-size:13px}
+  .card h3{margin:8px 0 6px; font-size:17px}
+  .card p{margin:0; color:var(--muted); font-size:14px}
+  .steps{margin-top:24px; padding:0; list-style:none; counter-reset:s}
+  .steps li{
+    position:relative; padding:18px 18px 18px 60px; margin-bottom:12px;
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+  }
+  .steps li::before{
+    counter-increment:s; content:counter(s);
+    position:absolute; left:18px; top:18px; width:28px; height:28px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:"IBM Plex Mono",monospace; font-size:14px; font-weight:700;
+    color:#04121a; background:var(--accent); border-radius:8px;
+  }
+  .steps li b{display:block; margin-bottom:4px}
+  .steps li span{color:var(--muted); font-size:14px}
+  .faq{margin-top:24px}
+  .faq details{
+    background:var(--surface); border:1px solid var(--line); border-radius:var(--r);
+    padding:14px 18px; margin-bottom:10px;
+  }
+  .faq summary{cursor:pointer; font-weight:600}
+  .faq p{color:var(--muted); font-size:14px; margin:10px 0 0}
+  .foot{margin-top:64px; padding-top:24px; border-top:1px solid var(--line); color:var(--muted); font-size:13px}
+  .foot code{font-family:"IBM Plex Mono",monospace; color:var(--accent-2)}
+  a.inline{color:var(--accent); text-decoration:none}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="brand"><span class="logo">~/argux</span><span>Inteligencia de Rutas</span></div>
+
+    <h1><span class="accent">ARGUX</span> en tu laptop,<br>listo en minutos.</h1>
+    <p class="lede">Triangula los GPS de tu flota contra tu catálogo de clientes para
+      detectar visitas, calidad y frecuencia de ruta. Lo instalas, lo abres, y un
+      asistente te configura todo — sin tocar archivos.</p>
+
+    <div class="cta">
+      <a class="btn" href="https://github.com/Shrek99/argux-descarga/releases/latest/download/ARGUX-Setup.exe">⬇ Descargar para Windows</a>
+      <a class="btn secondary" href="https://github.com/Shrek99/argux-descarga/releases/latest">Ver todas las versiones</a>
+    </div>
+    <div class="req">Windows 10 u 11 (64 bits) · ~ instalador ligero, la app se descarga al abrir por primera vez.</div>
+
+    <div class="note">
+      <b>⚠ Antes de instalar:</b> ARGUX necesita <b>Docker Desktop</b>. El instalador intenta
+      ponerlo solo, pero si no lo tienes es más seguro instalarlo tú primero desde
+      <a class="inline" href="https://www.docker.com/products/docker-desktop/">docker.com</a>
+      (gratis), reiniciar, y luego abrir el instalador de ARGUX.
+    </div>
+
+    <!-- ░░░ MANUAL ░░░ -->
+    <h2>Cómo instalarlo</h2>
+    <p class="sub">Tres pasos. La primera vez tarda unos minutos porque descarga la app.</p>
+    <ol class="steps">
+      <li><b>Instala Docker Desktop (una sola vez)</b><span>Descárgalo de docker.com, instálalo y reinicia si te lo pide. Déjalo abierto (verás un ícono de ballena en la barra de tareas).</span></li>
+      <li><b>Instala ARGUX</b><span>Da doble clic al archivo <code>ARGUX-Setup.exe</code> que descargaste. Acepta los permisos. Crea un ícono "ARGUX" en tu escritorio.</span></li>
+      <li><b>Abre ARGUX</b><span>Doble clic al ícono. La primera vez descarga la última versión y la levanta; luego se abre solo en tu navegador.</span></li>
+    </ol>
+
+    <h2>La primera vez que lo abres</h2>
+    <p class="sub">La app arranca en blanco. Un asistente te guía:</p>
+    <div class="grid">
+      <div class="card"><div class="n">01</div><h3>Credenciales TCVSAT</h3><p>Tu usuario y contraseña de TCVSAT. El botón "Probar conexión" confirma que funciona y te dice cuántas unidades ve tu cuenta.</p></div>
+      <div class="card"><div class="n">02</div><h3>Tu primera región</h3><p>Nombre, prefijo de ruta y ciudad. Es lo que define tu territorio.</p></div>
+      <div class="card"><div class="n">03</div><h3>(Opcional) GPS y Telegram</h3><p>Descubre tus GPS desde TCVSAT, y si quieres alertas, pega un token de Telegram en Argux Admin → Credenciales.</p></div>
+    </div>
+
+    <h2>Preguntas frecuentes</h2>
+    <div class="faq">
+      <details><summary>¿Cómo se actualiza?</summary><p>Solo. Cada vez que abres ARGUX busca y descarga la última versión. No reinstalas nada y tus datos se quedan.</p></details>
+      <details><summary>No abre / se queda cargando</summary><p>Asegúrate de que Docker Desktop esté corriendo (ícono de ballena en la barra de tareas). Ábrelo, espera a que diga "Engine running", y vuelve a abrir ARGUX.</p></details>
+      <details><summary>¿Mis datos están en la nube?</summary><p>No. Todo corre en tu propia laptop. La app solo habla con TCVSAT para bajar los GPS.</p></details>
+      <details><summary>¿Necesito ser administrador?</summary><p>Solo para instalar Docker Desktop la primera vez (puede pedir un reinicio). ARGUX en sí se instala en tu usuario.</p></details>
+    </div>
+
+    <div class="foot">
+      Se actualiza solo · corre 100% en tu laptop · soporte: WDBB.
+    </div>
+  </div>
+</body>
+</html>
