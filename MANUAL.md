@@ -16,14 +16,15 @@ O directo el instalador:
 ## 2. Requisitos
 
 - **Windows 10 u 11**, de 64 bits.
-- **Docker Desktop** (gratis). ARGUX lo necesita para funcionar.
-  El instalador intenta ponerlo solo, pero **es más seguro instalarlo tú
-  primero**: https://www.docker.com/products/docker-desktop/ → instala →
-  reinicia si te lo pide → déjalo abierto (ícono de ballena en la barra de tareas).
+- **Docker Desktop** (gratis) — **REQUISITO PREVIO, instálalo tú primero**:
+  https://www.docker.com/products/docker-desktop/ → instala → reinicia si te
+  lo pide → déjalo abierto (ícono de ballena en la barra de tareas).
+  > El instalador de ARGUX **no instala Docker**: si no lo encuentra, se
+  > detiene y te ofrece **Reintentar** para continuar una vez que ya lo tengas.
 
 ## 3. Instalar
 
-1. **Docker Desktop** (una sola vez): instálalo y déjalo corriendo.
+1. **Docker Desktop** (una sola vez): instálalo y déjalo corriendo. **Esto va primero.**
 2. **ARGUX**: doble clic a `ARGUX-Setup.exe`. Acepta los permisos.
    Crea un ícono **ARGUX** en tu escritorio.
 3. **Abre ARGUX**: doble clic al ícono. La primera vez descarga la última
@@ -51,7 +52,7 @@ Automáticas. Cada vez que abres ARGUX busca y descarga la última versión.
 | Síntoma | Solución |
 |---|---|
 | No abre / se queda cargando | Asegúrate de que **Docker Desktop** esté corriendo ("Engine running") y vuelve a abrir ARGUX. |
-| El instalador no pudo poner Docker | Instálalo a mano desde [docker.com](https://www.docker.com/products/docker-desktop/), reinicia y reintenta. |
+| El instalador se detuvo pidiendo Docker | Es a propósito: instala Docker Desktop desde [docker.com](https://www.docker.com/products/docker-desktop/), reinícialo, y pulsa **Reintentar**. |
 | ¿Mis datos están en la nube? | No. Todo corre en tu laptop; solo se conecta a TCVSAT para bajar los GPS. |
 
 ---

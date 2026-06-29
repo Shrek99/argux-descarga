@@ -105,6 +105,27 @@
   .aviso b{color:var(--ochre)}
   .aviso a{color:var(--sepia); font-weight:600}
 
+  /* descarga en 2 pasos: Docker primero, ARGUX después */
+  .pasos-dl{margin-top:18px; display:flex; flex-direction:column; gap:10px}
+  .paso-dl{
+    display:flex; align-items:center; gap:14px; padding:14px 16px;
+    background:var(--paper-sunk); border:1px solid var(--line); border-left:5px solid var(--line-strong);
+  }
+  .paso-dl .pno{
+    flex:0 0 auto; width:30px; height:30px; display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-weight:700; font-size:15px;
+    color:var(--rust-contrast); background:var(--ink-0); border-radius:1px;
+  }
+  .paso-dl .pbody{flex:1 1 auto; min-width:0}
+  .paso-dl .pbody b{display:block; color:var(--ink-0); font-size:15px}
+  .paso-dl .pbody .oblig{color:var(--ochre); font-weight:700}
+  .paso-dl .pbody span{color:var(--ink-1); font-size:13px}
+  .paso-dl .btn{flex:0 0 auto; padding:11px 18px; font-size:13px}
+  /* botón Docker = oliva (no rojo: el rojo queda para ARGUX) */
+  .btn.docker{background:transparent; color:var(--olive); border:2px solid var(--olive); box-shadow:none}
+  .btn.docker:hover{background:var(--success-soft)}
+  @media (max-width:560px){ .paso-dl{flex-wrap:wrap} .paso-dl .btn{width:100%; justify-content:center} }
+
   /* secciones = fichas sobre la mesa */
   .ficha{
     margin-top:22px; background:var(--paper-2);
@@ -194,17 +215,30 @@
         detectar visitas, calidad y frecuencia de ruta. Lo instalas, lo abres, y un
         asistente te configura todo — sin tocar archivos.</p>
 
-      <div class="cta">
-        <a class="btn" href="https://github.com/Shrek99/argux-descarga/releases/latest/download/ARGUX-Setup.exe">⬇ Descargar para Windows</a>
-        <a class="btn sec" href="https://github.com/Shrek99/argux-descarga/releases/latest">Ver versiones</a>
+      <div class="pasos-dl">
+        <div class="paso-dl">
+          <span class="pno">1</span>
+          <div class="pbody">
+            <b>Docker Desktop <span class="oblig">— obligatorio</span></b>
+            <span>ARGUX no funciona sin él. Instálalo, ábrelo y reinicia si te lo pide.</span>
+          </div>
+          <a class="btn docker" href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener">Descargar Docker</a>
+        </div>
+        <div class="paso-dl">
+          <span class="pno">2</span>
+          <div class="pbody">
+            <b>ARGUX para Windows</b>
+            <span>Con Docker ya instalado, baja e instala ARGUX.</span>
+          </div>
+          <a class="btn" href="https://github.com/Shrek99/argux-descarga/releases/latest/download/ARGUX-Setup.exe">⬇ Descargar ARGUX</a>
+        </div>
       </div>
-      <div class="req">Windows 10 u 11 · 64 bits · instalador ligero — la app se baja al abrir por primera vez</div>
+      <div class="req">Windows 10 u 11 · 64 bits · <a href="https://github.com/Shrek99/argux-descarga/releases/latest" style="color:var(--sepia)">ver versiones</a></div>
 
       <div class="aviso">
-        <b>⚠ Antes de instalar:</b> ARGUX necesita <b>Docker Desktop</b>. El instalador intenta
-        ponerlo solo, pero si no lo tienes es más seguro instalarlo tú primero desde
-        <a href="https://www.docker.com/products/docker-desktop/">docker.com</a> (gratis),
-        reiniciar, y luego abrir el instalador de ARGUX.
+        <b>⚠ Importante:</b> si abres el instalador de ARGUX <b>sin Docker</b>, se <b>detiene</b> y
+        te pide instalarlo primero — con un botón <b>Reintentar</b> para seguir en cuanto ya lo tengas.
+        Docker Desktop es gratis: <a href="https://www.docker.com/products/docker-desktop/">docker.com</a>.
       </div>
     </div>
 
